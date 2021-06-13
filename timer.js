@@ -33,12 +33,12 @@ function getTimeComponents(time) {
 
 
 class CountdownTimer {
-  constructor({ targetDate }) {
+  constructor({ targetDate, selector }) {
     this.targetDate = new Date(targetDate);
-    this.days = document.querySelector('span[data-value="days"]');
-    this.hours = document.querySelector('span[data-value="hours"]');
-    this.minutes = document.querySelector('span[data-value="mins"]');
-    this.seconds = document.querySelector('span[data-value="secs"]');
+    this.days = document.querySelector(`${selector} span[data-value="days"]`);
+    this.hours = document.querySelector(`${selector} span[data-value="hours"]`);
+    this.minutes = document.querySelector(`${selector} span[data-value="mins"]`);
+    this.seconds = document.querySelector(`${selector} span[data-value="secs"]`);
   }
 
   showClockFace() {
